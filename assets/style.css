@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 50px 20px; /* Adicionado padding horizontal para mobile */
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#status-container {
+    background-color: #ffffff;
+    padding: 40px 60px; /* Aumentado um pouco o padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px; /* Limite de largura para telas maiores */
+    width: 90%; /* Ocupa 90% da largura do pai */
+    transition: all 0.5s ease-in-out;
+    border-left: 8px solid #007bff;
+}
+
+#status-container p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+#status-container strong {
+    font-size: 1.6em;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.status-livre {
+    color: #28a745; /* Verde */
+    font-size: 3em; 
+    font-weight: bold;
+    animation: pulse-green 1.5s infinite alternate;
+    display: block;
+}
+
+.status-ocupada {
+    color: #dc3545; /* Vermelho */
+    font-size: 3em;
+    font-weight: bold;
+    animation: pulse-red 1.5s infinite alternate;
+    display: block;
+}
+
+.ultima-atualizacao {
+    display: block;
+    margin-top: 25px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* -------------------------------------- */
+/* MEDIA QUERIES (REGRAS RESPONSIVAS) */
+/* -------------------------------------- */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 20px 10px; 
+    }
+
+    h1 {
+        font-size: 1.5em; 
+        margin-bottom: 20px;
+    }
+
+    #status-container {
+        padding: 25px; 
+        width: 80%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        border-left-width: 5px; 
+    }
+
+    #status-container p {
+        font-size: 1em; 
+    }
+
+    .status-livre, .status-ocupada {
+        font-size: 2.2em; 
+    }
+
+    .ultima-atualizacao {
+        margin-top: 15px;
+        font-size: 0.8em;
+    }
+}
+/* Fim das Media Queries */
+
+/* Animações */
+@keyframes pulse-green {
+    from { transform: scale(1.0); }
+    to { transform: scale(1.05); }
+}
+@keyframes pulse-red {
+    from { transform: scale(1.0); }
+    to { transform: scale(1.05); }
+}
