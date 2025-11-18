@@ -5,15 +5,15 @@
     <title>Status da Vaga Inteligente</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/header.css">
 </head>
 <body>
+   <?php include 'views/header.php'; ?>
+<h1 class="page-h1">Status da Vaga Inteligente</h1>
 
-<h1>Monitoramento das Vagas</h1>
-<a href="?route=logout" style="margin-bottom: 20px; color: #dc3545; text-decoration: none;"><?php echo htmlspecialchars($username); ?> (Sair)</a>
 <div id="status-container">
     Carregando status...
 </div>
-
 <script>
 function atualizarStatus() {
     const container = document.getElementById('status-container');
